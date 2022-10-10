@@ -14,15 +14,25 @@
 <body>
     <form id="taskform">
         <div class="container-fluid">
-            <h1>T<span class="text-c">O</span>D<span class="text-c">O</span></h1>
+            <h1>T<span class="text-c">O</span>D<span class="text-c">Os</span></h1>
         </div>
         <div class="todo-input">
-            <input type="text" name="add" id="task" placeholder="Add a todo, e.g. Do the dishes">
+            <input type="text" class="firstinput" name="add" id="tasks" placeholder="make everyday count, by Creating an action plan">
+            <!-- <span>add</span> -->
         </div>
     </form>
     <main class="addedtasks">
         <section class="task-section">
-
+            <h3>task lists</h3>
+            <div id="task">
+                <div class="task">
+                    <input type="text" class="text" value="Make every day count" readonly>
+                    <div class="actions">
+                        <button class="edit">edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

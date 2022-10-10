@@ -1,24 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;400;600&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Gemunu Libre', sans-serif;
 }
 
 body {
-    background: #001329;
+    background-image: url(https://i.pinimg.com/originals/04/aa/93/04aa93c0d9fc3de3bf07af0388d90f94.jpg);
     width: 100%;
     height: 100vh;
-    color: blue;
 }
-
-
-/* .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-} */
 
 h1 {
     display: flex;
@@ -27,15 +19,40 @@ h1 {
     padding-top: 7%;
     font-size: 3.5em;
     font-weight: 2em;
+    color: blue;
     animation: bounce 10s infinite;
 }
 
-:root {
-    --pg-color: rebeccapurple;
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    color: var(--pg-color);
+}
+
+ :root {
+    --pg-color: #dd0a7e;
+    --pink: #ec4899;
+    --background: #001329;
+}
+
+::placeholder {
+    color: rgb(255, 254, 254);
+    font-size: 1.0em;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pg-color);
+    /* border: 1px solid rebeccapurple; */
+    margin-top: -4px;
+    height: auto;
 }
 
 .text-c {
-    color: chocolate;
+    color: var(--pg-color);
     text-decoration: line-through;
 }
 
@@ -43,25 +60,34 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2%;
+    padding-top: 2px;
 }
 
-input[type="text"] {
+.firstinput {
     width: 35%;
     padding: 3px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 26px;
     text-align: center;
     border: none;
-    /* border-bottom: 2px solid chocolate; */
     outline: none;
-    background: 002047;
-    color: black;
+    background: blue;
+    color: white;
     /* caret-color: white; */
     font-size: 1.5em;
-    animation: myshade 3s infinite;
+    /* animation: myshade 3s infinite; */
+}
+
+.text {
+    width: 45%;
+    padding: 5px;
+    border-radius: 16px;
+    /* text-align: center; */
+    border: 3px solid var(--pg-color);
+    outline: none;
+    background: var(--background);
+    color: var(--pg-color);
+    /* caret-color: white; */
+    font-size: 1.5em;
 }
 
 @keyframes myshade {
@@ -124,22 +150,26 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 550px) {
-    input[type="text"] {
+    .firstinput {
         width: 100%;
         margin-left: 10%;
         margin-right: 10%;
-        align-items: center;
-        justify-content: center;
         font-size: 1.0em;
+    }
+    .text {
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 1.0em;
+        border-radius: 7px;
     }
 }
 
 @media only screen and (max-width: 1072px) and (min-width: 551px) {
-    input[type="text"] {
+    .firstinput,
+    .text {
         width: 100%;
         margin-left: 15%;
         margin-right: 15%;
-        align-items: center;
-        justify-content: center;
     }
 }
